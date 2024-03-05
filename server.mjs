@@ -1,0 +1,25 @@
+// server.mjs
+
+import express from "express";
+import { router } from "./routes/routes.mjs";
+import dotenv from "dotenv";
+
+// Carregar variáveis de ambiente do arquivo .env
+dotenv.config();
+
+// Criar uma instância do aplicativo Express
+const app = express();
+
+// Porta em que o servidor irá escutar (usando a variável de ambiente PG_PORT ou uma porta padrão)
+const PORT = 3000;
+
+// Middleware para processar dados JSON
+app.use(express.json());
+
+// Montar as rotas
+app.use("/api", router);
+
+// Iniciar o servidor
+app.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
+});
