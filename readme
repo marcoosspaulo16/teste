@@ -1,6 +1,6 @@
 <h1> Teste </h1>
 
-Configuração de ambiente: - Instalação do node na máquina - Rodar o código `npm init -y` - Instalação dos pacotes necessários `npm install express pg pg-hstore sequelize` (versão do sequelize 6.37.1) e `npm install nodemon --save-dev`
+Configuração de ambiente: - Instalação do node na máquina (versão 20.11.0) - Rodar o código `npm init -y` - Instalação dos pacotes necessários `npm install express pg pg-hstore sequelize` (versão do sequelize 6.37.1, versão do express 4.18.3) e `npm install nodemon --save-dev`
 express: Framework web para Node.js que facilita a criação de APIs RESTful.
 
         pg: Cliente PostgreSQL para Node.js.
@@ -15,10 +15,22 @@ express: Framework web para Node.js que facilita a criação de APIs RESTful.
         `sudo apt update`
         `sudo apt install postgresql postgresql-contrib`
         Verificação de instalação `psql --version`
+        Versão utilizada 12.18
 
     - Instalação da Migration
         `npm install node-pg-migrate@6.2.2 --save-dev`
     - Instalação DotEnv@16.4.4
         `npm install dotenv@16.4.4`
+
+    Agora será necessário rodar os script's para criação da tabela `pacientes`
+
     - Realizar migração para criação da tabela `pacientes`
         `npm run migration:up`
+
+    Inicie o banco de dados Postgres
+        - Rode o script `npm run dev`
+
+    Levantando o servidor express e o sequelize.
+        - Rode o script `npm run start`
+
+    Finalmente a API pode ser testada via Postman.
