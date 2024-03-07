@@ -6,7 +6,8 @@
   "scripts": {
     "migration:create": "node-pg-migrate --migrations-dir infra/migrations create",
     "migration:up": "node-pg-migrate --migrations-dir infra/migrations --envPath .env up",
-    "start": "concurrently \"node server.mjs\" \"node sequelize.mjs\""
+    "start": "concurrently \"node server.mjs\" \"node sequelize.mjs\"",
+    "dev": "sudo service potgresql start"
   },
   "keywords": [],
   "author": "",
