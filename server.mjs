@@ -11,7 +11,7 @@ dotenv.config();
 const app = express();
 
 // Porta em que o servidor irá escutar (usando a variável de ambiente PG_PORT ou uma porta padrão)
-const PORT = 3000;
+const PORT = process.env.SERVER_PORT;
 
 // Middleware para processar dados JSON
 app.use(express.json());

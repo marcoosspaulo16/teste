@@ -65,11 +65,11 @@ express: Framework web para Node.js que facilita a criação de APIs RESTful.
         ```
     * Inicie o banco de dados Postgres
         ```
-        Rode o script `npm run dev
+        npm run dev
         ```
     * Levantando o servidor express e o sequelize.
         ```
-        Rode o script `npm run start
+        npm run start
         ```
 
 Finalmente a API pode ser testada via Postman.
