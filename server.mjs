@@ -1,5 +1,4 @@
 // server.mjs
-
 import express from "express";
 import { router } from "./routes/routes.mjs";
 import dotenv from "dotenv";
@@ -11,7 +10,7 @@ dotenv.config();
 const app = express();
 
 // Porta em que o servidor irá escutar (usando a variável de ambiente PG_PORT ou uma porta padrão)
-const PORT = 3000;
+const PORT = process.env.SERVER_PORT;
 
 // Middleware para processar dados JSON
 app.use(express.json());
